@@ -3,6 +3,7 @@
 //boton que realizara el cifrado//
 const botonCifrar= document.getElementById("botoncifrar");
 botonCifrar.addEventListener("click", mostrarCifrado); 
+ 
 
 
 function mostrarCifrado (){
@@ -11,7 +12,7 @@ function mostrarCifrado (){
     let textoCifar=document.getElementById("textoentrada").value;
 
     if(desplazamiento==""){
-        alert("ingresarNumeroDesplazamiento")
+        alert("ingresar numero desplazamiento")
     }else if(textoCifar==""){
         alert("ingresar texto a cifrar")  
     }else{
@@ -19,7 +20,6 @@ function mostrarCifrado (){
     }
     
 }
-
 
 //funcion cifrado//
 function cifrar (textoCifar, desplazamiento){
@@ -43,11 +43,50 @@ function cifrar (textoCifar, desplazamiento){
     
     }
      
-    alert (palabracifrada);
-
-
+    return palabracifrada;
 }
+//boton que realiza descifrado//
+const botonDescifrar= document.getElementById("botondescifrar");
+botonDescifrar.addEventListener("click", mostrarDescifrado);
 
 
+function mostrarDescifrado (){
+    
+    let desplazamientodescifrar=document.getElementById("entradaclave").value; 
+    let textoDescifrar=document.getElementById("textoentrada").value;
+
+    if(desplazamientodescifrar==""){
+        alert("ingresar numero desplazamiento")
+    }else if(textoDescifrar==""){
+        alert("ingresar texto a descifrar")      
+    }
+    else{
+        descifrar(textoDescifrar, parseInt(desplazamientodescifrar));
+    }
+}
+//funcion descifrado//
+function descifrar (textoDescifrar, desplazamientodescifrar){
+    let palabra=""+textoDescifrar;
+    let palabracifrada="";
+    
+    for (let i=0; i<palabra.length; i++){
+    let posicioncifrada=0;
+    let posicionoriginal=palabra.charCodeAt(i);
+    if (posicionoriginal>= 65 && posicionoriginal<=90){
+        console.log(posicionoriginal);
+    posicioncifrada=(posicionoriginal- 90 - desplazamientodescifrar) % 26 + 90;
+    }else if (posicionoriginal>= 97 && posicionoriginal<=122){
+        console.log(posicionoriginal);
+    posicioncifrada=(posicionoriginal- 122 - desplazamientodescifrar) % 26 + 122;
+    }else{
+        console.log(posicionoriginal+"else");
+        posicioncifrada=posicionoriginal;
+    }
+    palabracifrada+=String.fromCharCode(posicioncifrada);
+    
+    }
+     
+    alert (palabracifrada);
+}
 
 //console.log(cipher);
