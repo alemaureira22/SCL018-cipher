@@ -2,27 +2,60 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Votacion virtual</title>
+    <title>Canal Denuncias</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <img src="https://tse2.mm.bing.net/th?id=OIP.pv8YZMJUlEAlOuor53YfJQHaDZ&pid=Api&P=0&w=373&h=172" alt="">
   <body>
     <div id="barradetitulo">
-      <h1>Votacion virtual</h1>
+      <h1>Canal de denuncia</h1>
+      <h2>Este canal esta creado para que nuestros colaboradores sin importar su rango 
+        dentro de la empresa, puedan realizar sus consultas o denuncias de forma anonima
+         mediante un decodificor de texto
+      </h2>
     </div>
+    
+    <div id="barrainfo">
+    <div class="paso">
+      <label class="numero">1</label>
+      <label class="indicacion">Ingrese clave de seguridad</label>
+      <label class="descripcionindicacion">Cree una clave numerica,la cual compartira con su receptor</label>
+   </div>
+
+   <div id="barrainfo">
+    <div class="paso">
+      <label class="numero">2</label>
+      <label class="indicacion">Ingrese caso </label>
+      <label class="descripcionindicacion">ingrese caso a denunciar en cuadro de texto</label>
+   </div>
+   <div id="barrainfo">
+    <div class="paso">
+      <label class="numero">3</label>
+      <label class="indicacion">cifrar o descisfrar </label>
+      <label class="descripcionindicacion">Presione los botones cifrar o decifrar segun 
+        correponda(receptor o emisor)</label>
+   </div>
+
     <div id="barraclave">
       <h1>clave</h1>
       <input id="entradaclave" type="number" placeholder="introducir">
     </div>
     <div id="cuadrodetexto">
       <h1>ingrese texto</h1>
-      <textarea id="textoentrada" type="text" placeholder="ingresetextoacifrar"></textarea>
+      <textarea id="textoentrada" onkeyup="transformarMayusculas(this);" type="text" placeholder="ingresetextoacifrar"></textarea>
       <h1>texto resultado</h1>
       <textarea id="textosalida" type="text" placeholder="textocifrado"></textarea>
     </div>
     <div id="botones">
       <button id="botoncifrar">cifrar</button>
       <button id="botondescifrar">descifrar</button>
+      <button id="botonBorrar">borrar</button>
     </div>
+
+    <script src="cipher.js"></script>
     <script src="index.js"></script>
+    
+
   </body>
 </html>
+ 

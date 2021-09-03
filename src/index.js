@@ -1,92 +1,62 @@
-//import cipher from './cipher.js';
+//import {cipher} from './cipher.js';
 
-//boton que realizara el cifrado//
-const botonCifrar= document.getElementById("botoncifrar");
-botonCifrar.addEventListener("click", mostrarCifrado); 
- 
+//boton que realizara el cifrado
+const botonCifrar = document.getElementById("botoncifrar");
+botonCifrar.addEventListener("click", mostrarCifrado);
 
-
-function mostrarCifrado (){
-    
-    let desplazamiento=document.getElementById("entradaclave").value; 
-    let textoCifar=document.getElementById("textoentrada").value;
-
-    if(desplazamiento==""){
-        alert("ingresar numero desplazamiento")
-    }else if(textoCifar==""){
-        alert("ingresar texto a cifrar")  
-    }else{
-        cifrar(textoCifar, parseInt(desplazamiento));
-    }
-    
-}
-
-//funcion cifrado//
-function cifrar (textoCifar, desplazamiento){
-    let palabra=""+textoCifar;
-    let palabracifrada="";
-    
-    for (let i=0; i<palabra.length; i++){
-    let posicioncifrada=0;
-    let posicionoriginal=palabra.charCodeAt(i);
-    if (posicionoriginal>= 65 && posicionoriginal<=90){
-        console.log(posicionoriginal);
-    posicioncifrada=(posicionoriginal- 65 + desplazamiento) % 26 + 65;
-    }else if (posicionoriginal>= 97 && posicionoriginal<=122){
-        console.log(posicionoriginal);
-    posicioncifrada=(posicionoriginal- 97 + desplazamiento) % 26 + 97;
-    }else{
-        console.log(posicionoriginal+"else");
-        posicioncifrada=posicionoriginal;
-    }
-    palabracifrada+=String.fromCharCode(posicioncifrada);
-    
-    }
-     
-    return palabracifrada;
-}
 //boton que realiza descifrado//
-const botonDescifrar= document.getElementById("botondescifrar");
+const botonDescifrar = document.getElementById("botondescifrar");
 botonDescifrar.addEventListener("click", mostrarDescifrado);
 
+//boton que realiza borrar texto//
+const botonBorrar = document.getElementById("botonBorrar");
+botonBorrar.addEventListener("click", borrarTextos);
 
-function mostrarDescifrado (){
+
+
+
+
+function mostrarCifrado() {
+
+    let desplazamientoCifrar = document.getElementById("entradaclave").value;
+    let textoCifar = document.getElementById("textoentrada").value;
     
-    let desplazamientodescifrar=document.getElementById("entradaclave").value; 
-    let textoDescifrar=document.getElementById("textoentrada").value;
-
-    if(desplazamientodescifrar==""){
+    
+    if (desplazamientoCifrar == "") {
         alert("ingresar numero desplazamiento")
-    }else if(textoDescifrar==""){
-        alert("ingresar texto a descifrar")      
+    } else if (textoCifar == "") {
+        alert("ingresar texto a cifrar")
+    } else {
+        let mostarTextoCifrado = cipher.encode(textoCifar, parseInt(desplazamientoCifrar));
+        document.getElementById("textosalida").value = mostarTextoCifrado;
+
     }
-    else{
-        descifrar(textoDescifrar, parseInt(desplazamientodescifrar));
-    }
-}
-//funcion descifrado//
-function descifrar (textoDescifrar, desplazamientodescifrar){
-    let palabra=""+textoDescifrar;
-    let palabracifrada="";
-    
-    for (let i=0; i<palabra.length; i++){
-    let posicioncifrada=0;
-    let posicionoriginal=palabra.charCodeAt(i);
-    if (posicionoriginal>= 65 && posicionoriginal<=90){
-        console.log(posicionoriginal);
-    posicioncifrada=(posicionoriginal- 90 - desplazamientodescifrar) % 26 + 90;
-    }else if (posicionoriginal>= 97 && posicionoriginal<=122){
-        console.log(posicionoriginal);
-    posicioncifrada=(posicionoriginal- 122 - desplazamientodescifrar) % 26 + 122;
-    }else{
-        console.log(posicionoriginal+"else");
-        posicioncifrada=posicionoriginal;
-    }
-    palabracifrada+=String.fromCharCode(posicioncifrada);
-    
-    }
-     
-    alert (palabracifrada);
+
 }
 
-//console.log(cipher);
+function mostrarDescifrado() {
+
+    let desplazamientoDescifrar = document.getElementById("entradaclave").value;
+    let textoDescifrar = document.getElementById("textoentrada").value;
+
+    if (desplazamientoDescifrar == "") {
+        alert("ingresar numero desplazamiento")
+    } else if (textoDescifrar == "") {
+        alert("ingresar texto a descifrar")
+    }
+    else {
+        let mostrartextoDescifrar = cipher.decode(textoDescifrar, parseInt(desplazamientoDescifrar));
+        document.getElementById("textosalida").value = mostrartextoDescifrar;
+
+    }
+}
+ function transformarMayusculas(textoCifar) {
+     textoCifar.value=textoCifar.value.toUpperCase();
+    
+ }   
+
+function borrarTextos() {
+    document.getElementById("entradaclave").value = "";
+    document.getElementById("textoentrada").value = "";
+    document.getElementById("textosalida").value = "";
+  }

@@ -1,29 +1,32 @@
 body {
-
-  font-size: 20px;
-  background-color: #e5e5e5;
-  font-family: Patrick Hand;
-
-
-
-}
-barra titulo{
-    font-size: 40px;
-    color: #e5e5e5;
-    text-align: left;
-    padding-left: 8%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-right: 25%;
-    position: fixed;
-    background-color: #ab49cc;
-    top: 0px;
-
-
-  }
-
+  padding-left: 11em;
+  font-family: Georgia, "Times New Roman",
+        Times, serif;
+  color: purple;
+  background-color: #d8da3d }
+  
+  #barratitulo{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    width: 15em }
+h1 {
+  font-family: Helvetica, Geneva, Arial,
+        SunSans-Regular, sans-serif }
+   ul.navbar li {
+   background: white;
+   margin: 0.5em 0;
+   padding: 0.3em;
+   border-right: 1em solid black }
+   ul.navbar a {
+  text-decoration: none }
+  a:link {
+   color: blue }
+  a:visited {
+   color: purple }
 
   
-
-  
-  
+ 
