@@ -1,32 +1,211 @@
 body {
-  padding-left: 11em;
-  font-family: Georgia, "Times New Roman",
-        Times, serif;
-  color: purple;
-  background-color: #d8da3d }
-  
-  #barratitulo{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 2em;
-    left: 1em;
-    width: 15em }
-h1 {
-  font-family: Helvetica, Geneva, Arial,
-        SunSans-Regular, sans-serif }
-   ul.navbar li {
-   background: white;
-   margin: 0.5em 0;
-   padding: 0.3em;
-   border-right: 1em solid black }
-   ul.navbar a {
-  text-decoration: none }
-  a:link {
-   color: blue }
-  a:visited {
-   color: purple }
+  font-family: 'Roboto',arial,sans-serif;
+  padding: 15px;
+  background-color: rgb(245, 237, 237);
+}
 
-  
- 
+@media only screen and (max-width: 768px){
+  .paso{
+    display: block;
+    width: 100% ;
+    margin-bottom: 10px;
+  }
+  .descripcionindicacion{
+    padding-top: 3px ;
+  }
+  #botones, #clave{
+    display: block;
+    width: 100% ;
+    position: relative;
+  }
+  #botones{
+    margin-top: 20px;
+  }
+  #barraclave{
+    height: 100px;
+  }
+  .column{
+    width: 88.5% ;
+  }
+  .izquierda{
+    border-radius: 30px 30px 0px 0px ;
+  }
+  .derecha{
+    border-radius: 0px 0px 30px 30px ;
+    margin-top: -2px ;
+    margin-left: 0px ;
+  }
+}
+
+
+#titulo {
+  display: inline-block;
+  font-size: 25px;
+  position: relative;
+  top: -3.5px;
+  margin-bottom: 0px;
+}
+
+#descripciontitulo {
+  font-size: 13px;
+  color: #737373;
+  MARGIN-LEFT: 8PX;
+}
+
+#barraclave {
+  height: 50px;
+  background-color:rgb(245, 237, 237);
+  font-size: 15px;
+  color:grey;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  width: 96.5%;
+  border-radius: 0px 0px 32px 32px;
+  display: inline-block;
+}
+
+#clave{
+  width: 30%;
+  margin-left: 15px;
+  position: absolute;
+  z-index: 1000;
+}
+
+#barradetitulo{
+  padding-bottom: 5px;
+  color:grey ;
+  border-bottom: rgb(245, 237, 237) 5px solid;
+  width: 96.5%;
+}
+
+
+#botones{
+  width: 100%;
+  text-align: center;
+
+}
+
+#botonesauxiliares{
+  display: inline-block;
+  margin: 15px 0px;
+  width: 96.5%;
+  text-align: center;
+}
+
+#entradaclave{
+  margin-left: 5px;
+  padding: 3px;
+  padding-left: 11px;
+  padding-right: 5px;
+  border-radius: 16px;
+  border-color:grey;
+  width: 100px;
+  height: 20px;
+}
+
+.column {
+  float: left;
+  width: 45%;
+  height: 150px;
+  padding: 20px;
+  margin-top: 13px;
+  border: 2px solid grey;
+  font-size: 24px;
+  font-family: 'Roboto',arial,sans-serif;
+
+}
+
+.izquierda{
+  border-radius: 30px 0px 0px 30px;
+}
+
+.derecha{
+  margin-left: -2px;
+  border-radius: 0px 30px 30px 0px;
+}
+
+
+.boton{
+  width: 120px;
+  height: 30px;
+  text-decoration: none;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 300;
+  font-size: 18px;
+  color:grey rgb(75, 74, 72);
+  background-color: #fffefe;
+  border-radius: 16px;
+  border: 2px solid #bfbfbf;
+  box-shadow: 1px 2px 2px grey;  
+}
+
+.boton:hover{
+  background-color: grey (255, 172, 71);
+  color: #ffffff;
+  border-color: #fff6ee;
+  cursor: pointer;
+}
+
+.aux{  
+  background-color:white ;
+  color: #1a1818;
+  border:rgb(105, 107, 107);
+}
+
+.aux:hover{
+  background-color: grey;
+  color: #ffffff;
+  border-color: #fff6ee;
+  cursor: pointer;
+}
+
+#barrainfo{
+  border-bottom: #555555 solid 2px;
+  width: 96.5%;
+  padding-bottom: 10px;
+  padding-top: 15px;
+  display: inline-block;
+}
+
+.paso{
+  color: #989898;
+  width: 25%;
+  float: left;
+  font-size: 12px;
+}
+
+.indicacion{
+  color: #6b6b6b;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.numero{
+  color: #909090;
+  font-size: 20px;
+  font-weight: bold;
+  border: rgb(32, 31, 28) solid 2px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+.descripcionindicacion{
+  color: #737373;
+  display: inline-block;
+  padding: 9px 35px 0px 55px;
+}
+.logo {
+  font-size: 40px;
+  display: inline-block;
+  width: 36px;
+}
+
+footer {
+  background-color: rgb(114, 113, 110);
+  line-height: 3;
+  text-align: center;
+  width: 100%;
+}

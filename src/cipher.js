@@ -1,6 +1,6 @@
-window.cipher = {
-
-  encode: (textoCifar, desplazamientoCifrar) => {
+const cipher = {
+    
+ encode: (textoCifar, desplazamientoCifrar) => {
 
       let palabra = "" + textoCifar;
       let palabracifrada = "";
@@ -10,10 +10,8 @@ window.cipher = {
           let posicionoriginal = palabra.charCodeAt(i);
 
           if (posicionoriginal >= 65 && posicionoriginal <= 90) {
-              
               posicioncifrada = (posicionoriginal - 65 + desplazamientoCifrar) % 26 + 65;
           } else if (posicionoriginal >= 97 && posicionoriginal <= 122) {
-            
               posicioncifrada = (posicionoriginal - 97 + desplazamientoCifrar) % 26 + 97;
           } else {
               
@@ -32,10 +30,8 @@ window.cipher = {
           let posicioncifrada = 0;
           let posicionoriginal = palabra.charCodeAt(i);
           if (posicionoriginal >= 65 && posicionoriginal <= 90) {
-              console.log(posicionoriginal);
               posicioncifrada = (posicionoriginal - 90 - desplazamientodescifrar) % 26 + 90;
           } else if (posicionoriginal >= 97 && posicionoriginal <= 122) {
-              console.log(posicionoriginal);
               posicioncifrada = (posicionoriginal - 122 - desplazamientodescifrar) % 26 + 122;
           } else {
               
@@ -46,7 +42,7 @@ window.cipher = {
       return palabracifrada;
   }
 };
-//export default cipher;
+export default cipher;
 
 
 
