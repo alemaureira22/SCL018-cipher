@@ -12,6 +12,10 @@ botonDescifrar.addEventListener("click", mostrarDescifrado);
 const botonBorrar = document.getElementById("botonBorrar");
 botonBorrar.addEventListener("click", borrarTextos);
 
+//boton que realiza copia texto//
+//const botonCopiar = document.getElementById("botonCopiar");
+//botonCopiar.addEventListener("click", copiarTextos);
+
 
 //transformacion a mayusculas
 const textoEntrada = document.getElementById("textoentrada");
@@ -22,13 +26,14 @@ function mostrarCifrado() {
   let textoCifar = document.getElementById("textoentrada").value;
 
   if (desplazamientoCifrar == "") {
-    alert("ingresar numero desplazamiento");
-  } else if (textoCifar == "") {
-    alert("ingresar texto a cifrar");
+  //  alert("ingresar numero desplazamiento");
+  //} else if (textoCifar == "") {
+    //alert("ingresar texto a cifrar");
   } else {
     let mostarTextoCifrado = cipher.encode(
-      textoCifar,
-      parseInt(desplazamientoCifrar)
+      
+      parseInt(desplazamientoCifrar),
+      textoCifar
     );
     document.getElementById("textosalida").value = mostarTextoCifrado;
   }
@@ -40,12 +45,13 @@ function mostrarDescifrado() {
 
   if (desplazamientoDescifrar == "") {
     alert("ingresar numero desplazamiento");
-  } else if (textoDescifrar == "") {
+   } else if (textoDescifrar == "") {
     alert("ingresar texto a descifrar");
   } else {
     let mostrartextoDescifrar = cipher.decode(
-      textoDescifrar,
-      parseInt(desplazamientoDescifrar)
+     
+      parseInt(desplazamientoDescifrar),
+      textoDescifrar
     );
     document.getElementById("textosalida").value = mostrartextoDescifrar;
   }
@@ -59,7 +65,13 @@ function borrarTextos() {
   document.getElementById("textoentrada").value = "";
   document.getElementById("textosalida").value = "";
 }
-
-  
-
+ //function copiarTextos(){
+  // let aux = document.createElement("input");
+   //aux.setAttribute("value", document.getElementById("textosalida").value);
+   //document.body.appendChild(aux);
+   //document.execCommand("copy");
+   //document.body.removeChild(aux);//
+   
+ 
+console.log(cipher);
   

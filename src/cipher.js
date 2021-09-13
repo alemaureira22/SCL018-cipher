@@ -1,6 +1,6 @@
 const cipher = {
     
- encode: (textoCifar, desplazamientoCifrar) => {
+ encode: (desplazamientoCifrar,textoCifar, ) => {
 
       let palabra = "" + textoCifar;
       let palabracifrada = "";
@@ -22,7 +22,7 @@ const cipher = {
       return palabracifrada;
   },
 
-  decode: (textoDescifrar, desplazamientodescifrar) => {
+  decode: (desplazamientodescifrar,textoDescifrar) => {
       let palabra = "" + textoDescifrar;
       let palabracifrada = "";
 
