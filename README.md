@@ -11,12 +11,14 @@ Los principales usuarios son los colaboradores de la empresa que tengan algun co
 
 El objetivo principal de esta pagina es dar a conocer de forma anonima un problema de integridad que se esta presentando dentro de la empresa y poder llegar a una solucion para ambas partes.
 
-### comenzamos
- Para utilizar la pagina solo debes  acceder al sitio web file:///C:/Users/jandr/Desktop/proyect%20cipher/SCL018-cipher-main/src/index.html
+## Comenzamos
+ Para utilizar la pagina solo debes  acceder al sitio web 
 
 ## Confeccion de la pagina
 
-El objetivo fundamental de esta pagina es mantener la privacidad de una denuncia realizada por los colaboradores de la empresa. Muchas veces se dejan pasar temas de integridad por el miedo a ser disviculados de su trabajo. Para esto fue creado esta pagina de denuncias anonimas
+El objetivo fundamental de esta pagina es mantener la privacidad de una denuncia realizada por los colaboradores de la empresa. Muchas veces se dejan pasar temas de integridad por el miedo a ser disviculados de su trabajo. Para esto fue creado esta pagina de denuncias anonimas 
+<br>
+![](src/imgenesreadme/cipher imagen.png)
 
 El mecanismo de encriptacion de la aplicacion es el cifrado Cesar, el mismo es uno de los primeros metodos de cifrados conocidos.El emperador romano Julio Cesar lo usaba para enviar ordenes secretas a sus generales en el campo de batalla.(https://en.wikipedia.org/wiki/Caesar_cipher)
 

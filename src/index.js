@@ -26,9 +26,9 @@ function mostrarCifrado() {
   let textoCifar = document.getElementById("textoentrada").value;
 
   if (desplazamientoCifrar == "") {
-  //  alert("ingresar numero desplazamiento");
-  //} else if (textoCifar == "") {
-    //alert("ingresar texto a cifrar");
+    alert("ingresar numero desplazamiento");
+    } else if (textoCifar == "") {
+     alert("ingresar texto a cifrar");
   } else {
     let mostarTextoCifrado = cipher.encode(
       

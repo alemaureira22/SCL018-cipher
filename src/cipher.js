@@ -1,7 +1,15 @@
 const cipher = {
     
- encode: (desplazamientoCifrar,textoCifar, ) => {
-
+ encode: (desplazamientoCifrar,textoCifar ) => {
+     let validation1= desplazamientoCifrar=== undefined || textoCifar === undefined;
+     let validation2= desplazamientoCifrar===null && Array.isArray(textoCifar);
+     let validation3= desplazamientoCifrar===0 && textoCifar===0;
+     console.log(validation2,desplazamientoCifrar,textoCifar);
+     
+    if (validation1|| validation2||validation3){
+        throw new TypeError();
+        
+        }
       let palabra = "" + textoCifar;
       let palabracifrada = "";
 
@@ -23,6 +31,17 @@ const cipher = {
   },
 
   decode: (desplazamientodescifrar,textoDescifrar) => {
+    let validation4= desplazamientodescifrar=== undefined || textoDescifrar === undefined;
+    let validation5= desplazamientodescifrar===null && Array.isArray(textoDescifrar);
+    let validation6= desplazamientodescifrar===0 && textoDescifrar===0;
+
+    
+   if (validation4|| validation5||validation6){
+       throw new TypeError();
+       
+       }
+    
+    
       let palabra = "" + textoDescifrar;
       let palabracifrada = "";
 
