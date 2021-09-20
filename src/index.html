@@ -6,20 +6,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
-       <div id="barradetitulo">
-       <h1 id="titulo">Canal de denuncia</h1> 
-       <p id="descripciontitulo"
+   
+    <header>
+      <img id="logo" src="imagenes/logo.png">
+      
+      <h1>Canal de denuncia</h1>
+    </header>
+       <div id="barradetitulo">  
+        <p id="descripciontitulo"
           ><hr>Este canal esta creado para que nuestros colaboradores sin importar
           su rango dentro de la empresa, puedan realizar sus consultas o
           denuncias de forma anonima mediante un decodificor de texto<hr/>
-        </p>
+       </p>
         <br/>
-     
-  
       </div>
 
-      <div id="barrainfoa">
         <div class="paso">
           <label class="numero">1</label>
           <label class="indicacion">Ingrese clave de seguridad</label>
@@ -27,9 +28,6 @@
             >Cree una clave numerica,la cual compartira con su receptor</label
           >
         </div>
-      </div>
-
-      <div id="barrainfob">
         <div class="paso">
           <label class="numero">2</label>
           <label class="indicacion">Ingrese caso </label>
@@ -37,9 +35,6 @@
             >Ingrese caso a denunciar en cuadro de texto</label
           >
         </div>
-      </div>
-
-      <div id="barrainfoc">
         <div class="paso">
           <label class="numero">3</label>
           <label class="indicacion">cifrar o descisfrar </label>
@@ -48,21 +43,17 @@
             emisor)</label
           ><br />
         </div>
-      </div>
-      <div id="barrainfod">
-        <div class="paso">
+       <div class="paso">
           <label class="numero">4</label>
-          <label class="indicacion">copiar y enviar </label>
+          <label class="indicacion">Limpiar </label>
           <label class="descripcionindicacion"
-            >Copiar y enviar el texto anonimo</label
+            >Presione boton limpar para refrescar textos</label
           ><br />
         </div>
-      </div>
-
-      <div id="barraclave">
+        <div id="barraclave">
         <div id="clave">
           <label>Clave</label>
-          <input id="entradaclave" type="number" placeholder="introducir" />
+          <input id="entradaclave" type="number" placeholder="Introducir" />
         </div>
       </div>
 
@@ -90,13 +81,9 @@
             placeholder="texto anonimo"
           ></textarea>
         </div>
-
         <div id="botonesauxiliares">
           <button id="botonBorrar" class="boton aux">limpiar</button>
-          <button id="botonCopiar" class="boton aux">copiar</button>
         </div>
-      
-    
     <footer>
       Derechos reservados\ Alejandra M &copy
     </footer>

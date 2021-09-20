@@ -1,14 +1,16 @@
 const cipher = {
     
  encode: (desplazamientoCifrar,textoCifar ) => {
-     let validation1= desplazamientoCifrar=== undefined || textoCifar === undefined;
+    /* let validation1= desplazamientoCifrar=== undefined || textoCifar === undefined;
      let validation2= desplazamientoCifrar===null && Array.isArray(textoCifar);
      let validation3= desplazamientoCifrar===0 && textoCifar===0;
-     console.log(validation2,desplazamientoCifrar,textoCifar);
-     
-    if (validation1|| validation2||validation3){
-        throw new TypeError();
+     console.log(validation2,desplazamientoCifrar,textoCifar);*/
+    /* condicionar throw  
+    /*if (validation1|| validation2||validation3){
+        throw new TypeError();*/
         
+     if(desplazamientoCifrar===null|| textoCifar=== 0){
+        throw new TypeError();
         }
       let palabra = "" + textoCifar;
       let palabracifrada = "";
@@ -16,6 +18,7 @@ const cipher = {
       for (let i = 0; i < palabra.length; i++) {
           let posicioncifrada = 0;
           let posicionoriginal = palabra.charCodeAt(i);
+        
 
           if (posicionoriginal >= 65 && posicionoriginal <= 90) {
               posicioncifrada = (posicionoriginal - 65 + desplazamientoCifrar) % 26 + 65;
@@ -31,7 +34,7 @@ const cipher = {
   },
 
   decode: (desplazamientodescifrar,textoDescifrar) => {
-    let validation4= desplazamientodescifrar=== undefined || textoDescifrar === undefined;
+   /* let validation4= desplazamientodescifrar=== undefined || textoDescifrar === undefined;
     let validation5= desplazamientodescifrar===null && Array.isArray(textoDescifrar);
     let validation6= desplazamientodescifrar===0 && textoDescifrar===0;
 
@@ -39,9 +42,11 @@ const cipher = {
    if (validation4|| validation5||validation6){
        throw new TypeError();
        
-       }
+       }*/
     
-    
+       if(desplazamientodescifrar===null|| textoDescifrar=== 0){
+        throw new TypeError();
+        }
       let palabra = "" + textoDescifrar;
       let palabracifrada = "";
 
