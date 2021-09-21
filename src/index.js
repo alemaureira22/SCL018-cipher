@@ -12,11 +12,6 @@ botonDescifrar.addEventListener("click", mostrarDescifrado);
 const botonBorrar = document.getElementById("botonBorrar");
 botonBorrar.addEventListener("click", borrarTextos);
 
-//boton que realiza copia texto//
-//const botonCopiar = document.getElementById("botonCopiar");
-//botonCopiar.addEventListener("click", copiarTextos);
-
-
 //transformacion a mayusculas
 const textoEntrada = document.getElementById("textoentrada");
 textoEntrada.addEventListener("keyup", transformarMayusculas);
@@ -65,13 +60,6 @@ function borrarTextos() {
   document.getElementById("textoentrada").value = "";
   document.getElementById("textosalida").value = "";
 }
- //function copiarTextos(){
-  // let aux = document.createElement("input");
-   //aux.setAttribute("value", document.getElementById("textosalida").value);
-   //document.body.appendChild(aux);
-   //document.execCommand("copy");
-   //document.body.removeChild(aux);//
-   
- 
+    
 console.log(cipher);
   

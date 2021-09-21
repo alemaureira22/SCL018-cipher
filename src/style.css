@@ -150,7 +150,7 @@ h1 {
 }
 
 .boton:hover{
-  background-color: rgb(248, 245, 245) (255, 172, 71);
+  background-color: grey ;
   color: #030303;
   border-color: #5a5957;
   cursor: pointer;
@@ -159,17 +159,15 @@ h1 {
 .aux{  
   background-color:white ;
   color: #1a1818;
-  border:rgb(105, 107, 107);
+  border-color:rgb(105, 107, 107);
 }
 
 .aux:hover{
   background-color: grey;
-  color: #ffffff;
-  border-color: #c0bebc;
+  color: #1a1818;
+  border-color: #5a5957;
   cursor: pointer;
 }
-
-
 
 
 footer {
