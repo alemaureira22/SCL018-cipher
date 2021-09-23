@@ -12,7 +12,7 @@ Los principales usuarios son los colaboradores de la empresa con contratacion vi
 El objetivo principal de esta pagina es dar a conocer de forma anonima un problema de integridad que se esta presentando dentro de la empresa y poder llegar a una solucion para ambas partes.
 
 ## Comenzamos
- Para utilizar la pagina solo debes acceder al sitio web http://localhost:5000/
+ Para utilizar la pagina solo debes acceder al sitio web https://alemaureira22.github.io/SCL018-cipher/src/
 
 ## Confeccion de la pagina
 
